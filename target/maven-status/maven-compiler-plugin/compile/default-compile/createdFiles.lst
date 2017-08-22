@@ -1,0 +1,13 @@
+project\model\Headline.class
+project\JSONComparator.class
+project\model\Byline.class
+project\model\Response.class
+project\JSONValidator.class
+project\InputParametersParser.class
+project\model\Person.class
+project\model\Keyword.class
+project\FileNamesValidator.class
+project\FileConverter.class
+project\model\Document.class
+project\model\Multimedia.class
+project\model\InputData.class
