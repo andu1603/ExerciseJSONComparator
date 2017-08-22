@@ -2,10 +2,14 @@ package project.model;
 
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.converters.FileConverter;
+import lombok.Getter;
+import lombok.Setter;
 import project.FileNamesValidator;
 
 import java.io.File;
 
+@Getter
+@Setter
 public class InputParameters {
     @Parameter(names = {"--firstFile", "-ff"}
             , description = ""
@@ -32,36 +36,4 @@ public class InputParameters {
    /* @Parameter(names={"--help", "-h"},
             help = true)
     private boolean help;*/
-
-    public File getFirstFile() {
-        return firstFile;
-    }
-
-    public void setFirstFile(File firstFile) {
-        this.firstFile = firstFile;
-    }
-
-    public File getSecondFile() {
-        return secondFile;
-    }
-
-    public void setSecondFile(File secondFile) {
-        this.secondFile = secondFile;
-    }
-
-    public String getIdForOutput() {
-        return idForOutput;
-    }
-
-    public void setIdForOutput(String idForOutput) {
-        this.idForOutput = idForOutput;
-    }
-
-    public String getIdForComparing() {
-        return idForComparing;
-    }
-
-    public void setIdForComparing(String idForComparing) {
-        this.idForComparing = idForComparing;
-    }
 }
