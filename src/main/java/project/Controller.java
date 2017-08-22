@@ -6,6 +6,7 @@ import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
 import project.model.InputParameters;
 import project.model.json.InputData;
+import project.printers.MapListConsolePrinter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,9 +26,9 @@ public class Controller {
             InputData inputDataFf = JSON2JavaObjectConverter.convert(inputParameters.getFirstFile());
             InputData inputDataSf = JSON2JavaObjectConverter.convert(inputParameters.getSecondFile());
             Map<String, List<String>> diff = Comparator.getDiff(inputDataFf, inputDataSf);
-            System.out.println(diff);
+            MapListConsolePrinter.print(diff);
         } catch (ParameterException e) {
-            System.out.println("[ERROR.INCORRECT_PARAMETERS] " + e.getMessage());
+            LOG.error(e);
         }
     }
 }
