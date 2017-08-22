@@ -1,4 +1,4 @@
-package project;
+package project.convertors;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
@@ -20,14 +20,17 @@ public class JSON2JavaObjectConverter {
     }
 
     public static InputData convert(File file, FieldNamingPolicy policy) {
-        LOG.info(StringFormatter.format("Start to convert file {} to JSON object using policy ", file.getName(), policy.name()));
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(policy).create();
+        LOG.info(StringFormatter.format("Start to convert file {} to JSON object using policy {}",
+                file.getName(),
+                policy.name()));
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(policy)
+                .create();
         InputData inputData = null;
         try (FileReader reader = new FileReader(file)) {
             inputData = gson.fromJson(reader, InputData.class);
         } catch (FileNotFoundException e) {
-            LOG.error(StringFormatter.format("File {} wasn't found in the system", file.getName()));
-            LOG.error(e);
+            LOG.error(StringFormatter.format("File {} wasn't found in the system. Getting {}", file.getName(), e));
         } catch (IOException e) {
             LOG.error(StringFormatter.format("Some problem with input thread for {}: {}", file.getName(), e));
         }

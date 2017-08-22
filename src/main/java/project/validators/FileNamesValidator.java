@@ -1,4 +1,4 @@
-package project;
+package project.validators;
 
 import com.beust.jcommander.IParameterValidator;
 import com.beust.jcommander.ParameterException;

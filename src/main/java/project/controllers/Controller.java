@@ -1,9 +1,14 @@
-package project;
+package project.controllers;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.ParameterException;
 import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
+import project.comparators.ComparatorBy;
+import project.comparators.ComparatorFactory;
+import project.convertors.JSON2JavaObjectConverter;
+import project.mode.IterateBy;
+import project.mode.IterateFactory;
 import project.model.InputParameters;
 import project.model.json.InputData;
 import project.printers.MapListConsolePrinter;
@@ -25,7 +30,9 @@ public class Controller {
             commander.parse(input);
             InputData inputDataFf = JSON2JavaObjectConverter.convert(inputParameters.getFirstFile());
             InputData inputDataSf = JSON2JavaObjectConverter.convert(inputParameters.getSecondFile());
-            Map<String, List<String>> diff = Comparator.getDiff(inputDataFf, inputDataSf);
+            IterateBy iterateMethod = IterateFactory.getIterateMethod(inputParameters);
+            ComparatorBy comparator = ComparatorFactory.getComparator(inputParameters);
+            Map<String, List<String>> diff = iterateMethod.iterateAndCompare(comparator, inputDataFf, inputDataSf);
             MapListConsolePrinter.print(diff);
         } catch (ParameterException e) {
             LOG.error(e);

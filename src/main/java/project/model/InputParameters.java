@@ -4,7 +4,7 @@ import com.beust.jcommander.Parameter;
 import com.beust.jcommander.converters.FileConverter;
 import lombok.Getter;
 import lombok.Setter;
-import project.FileNamesValidator;
+import project.validators.FileNamesValidator;
 
 import java.io.File;
 
