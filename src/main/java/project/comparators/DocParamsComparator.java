@@ -1,5 +1,7 @@
 package project.comparators;
 
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.annotations.SerializedName;
 import org.apache.log4j.Logger;
 import project.exceptions.SystemException;
 import project.model.json.Document;
@@ -24,7 +26,10 @@ public class DocParamsComparator implements ComparatorBy {
             try {
                 if (!isValueEq(field.get(documentFf), field.get(documentSf))) {
                     LOG.info(String.format("%s is not equals ", field.getName()));
-                    diffFields.add(field.getName());
+                    String name = null;
+                    for (SerializedName annotation : field.getAnnotationsByType(SerializedName.class))
+                        name = annotation.value();
+                    diffFields.add(name != null ? name : FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES.translateName(field));
                 }
                 LOG.info(String.format("%s is equals ", field.getName()));
             } catch (IllegalAccessException e) {

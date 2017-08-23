@@ -4,7 +4,7 @@ public class JSONParameter2JavaObjectFieldNameConverter {
 
     public static String convert(String name) {
         StringBuilder translation = new StringBuilder();
-        if (name.startsWith("_")) {
+        while (name.startsWith("_")) {
             name = name.substring(1);
         }
         if (!name.contains("_"))
@@ -12,8 +12,10 @@ public class JSONParameter2JavaObjectFieldNameConverter {
         String[] words = name.split("_");
         translation.append(words[0]);
         for (int i = 1; i < words.length; i++) {
-            translation.append(words[i].substring(0, 1).toUpperCase())
-                    .append(words[i].substring(1));
+            String word = words[i];
+            if (word.isEmpty()) continue;
+            translation.append(word.substring(0, 1).toUpperCase())
+                    .append(word.substring(1));
         }
         return translation.toString();
     }
