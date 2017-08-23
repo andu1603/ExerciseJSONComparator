@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 Ant-Version: Apache Ant 1.7.1
 Created-By: 1.5.0_20-141 (Company Inc.)
-Main-Class: project.JSONComparator
+Main-Class: project.JSONComparatorApplication

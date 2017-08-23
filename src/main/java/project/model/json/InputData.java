@@ -1,5 +1,6 @@
 package project.model.json;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -7,6 +8,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
-public class InputData {
+@EqualsAndHashCode
+public class InputData{
     private Response response;
 }

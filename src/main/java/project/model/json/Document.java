@@ -1,6 +1,7 @@
 package project.model.json;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,7 +13,8 @@ import java.util.List;
 @ToString
 @Getter
 @Setter
-public class Document {
+@EqualsAndHashCode
+public class Document{
     @SerializedName("abstract")
     private Integer abstr;
     @SerializedName("_id")

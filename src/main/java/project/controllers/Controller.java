@@ -7,9 +7,10 @@ import org.apache.log4j.Logger;
 import project.comparators.ComparatorBy;
 import project.comparators.ComparatorFactory;
 import project.convertors.JSON2JavaObjectConverter;
-import project.mode.IterateBy;
-import project.mode.IterateFactory;
+import project.iterators.IterateBy;
+import project.iterators.IterateFactory;
 import project.model.InputParameters;
+import project.model.OutputParameters;
 import project.model.json.InputData;
 import project.printers.MapListConsolePrinter;
 
@@ -32,7 +33,7 @@ public class Controller {
             InputData inputDataSf = JSON2JavaObjectConverter.convert(inputParameters.getSecondFile());
             IterateBy iterateMethod = IterateFactory.getIterateMethod(inputParameters);
             ComparatorBy comparator = ComparatorFactory.getComparator(inputParameters);
-            Map<String, List<String>> diff = iterateMethod.iterateAndCompare(comparator, inputDataFf, inputDataSf);
+            OutputParameters diff = iterateMethod.iterateAndCompare(comparator, inputDataFf, inputDataSf);
             MapListConsolePrinter.print(diff);
         } catch (ParameterException e) {
             LOG.error(e);

@@ -2,6 +2,7 @@ package project;
 
 import org.apache.log4j.Logger;
 import project.controllers.Controller;
+import project.convertors.JSONParameter2JavaObjectFieldNameConverter;
 
 
 public class JSONComparatorApplication {

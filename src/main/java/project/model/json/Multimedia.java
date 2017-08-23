@@ -1,8 +1,6 @@
 package project.model.json;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.net.URI;
 import java.util.Map;
@@ -10,7 +8,8 @@ import java.util.Map;
 @ToString
 @Getter
 @Setter
-public class Multimedia {
+@EqualsAndHashCode
+public class Multimedia{
     private Integer width;
     private URI url;
     private Integer rank;

@@ -27,10 +27,7 @@ public class InputParameters {
     )
     private File secondFile;
 
-    @Parameter(names = {"--idForOutput -ifo"})
-    private String idForOutput;
-
-    @Parameter(names = {"--idForComparing -ifc"})
+    @Parameter(names = {"--idForComparing", "-ifc"})
     private String idForComparing;
 
    /* @Parameter(names={"--help", "-h"},

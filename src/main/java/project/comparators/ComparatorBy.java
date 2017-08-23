@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface ComparatorBy {
-    public List<String> getDiff(Document documentFf, Document documentSf);
+    List<String> getDiff(Document documentFf, Document documentSf);
 }
