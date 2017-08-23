@@ -11,6 +11,6 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Response{
+public class Response {
     private List<Document> docs;
 }

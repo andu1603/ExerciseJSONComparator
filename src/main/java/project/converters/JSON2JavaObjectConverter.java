@@ -1,10 +1,11 @@
-package project.convertors;
+package project.converters;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
+import project.exceptions.IncorrectInputParametersException;
+import project.exceptions.SystemException;
 import project.model.json.InputData;
 
 import java.io.File;
@@ -20,7 +21,7 @@ public class JSON2JavaObjectConverter {
     }
 
     public static InputData convert(File file, FieldNamingPolicy policy) {
-        LOG.info(StringFormatter.format("Start to convert file {} to JSON object using policy {}",
+        LOG.info(String.format("Start to convert file %s to JSON object using policy %s",
                 file.getName(),
                 policy.name()));
         Gson gson = new GsonBuilder()
@@ -30,11 +31,13 @@ public class JSON2JavaObjectConverter {
         try (FileReader reader = new FileReader(file)) {
             inputData = gson.fromJson(reader, InputData.class);
         } catch (FileNotFoundException e) {
-            LOG.error(StringFormatter.format("File {} wasn't found in the system. Getting {}", file.getName(), e));
+            throw new IncorrectInputParametersException(String.format("File %s wasn't found in the system.",
+                    file.getName()), e);
         } catch (IOException e) {
-            LOG.error(StringFormatter.format("Some problem with input thread for {}: {}", file.getName(), e));
+            throw new SystemException(String.format("Problem with input thread for %s",
+                    file.getName()), e);
         }
-        LOG.info(StringFormatter.format("File was successfully converted to {}", inputData));
+        LOG.info(String.format("File was successfully converted to %s", inputData));
         return inputData;
 
     }

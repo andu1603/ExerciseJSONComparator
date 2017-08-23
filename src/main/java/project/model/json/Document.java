@@ -14,7 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Document{
+public class Document {
     @SerializedName("abstract")
     private Integer abstr;
     @SerializedName("_id")

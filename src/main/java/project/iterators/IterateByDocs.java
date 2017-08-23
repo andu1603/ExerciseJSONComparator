@@ -1,15 +1,13 @@
 package project.iterators;
 
-import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
 import project.comparators.ComparatorBy;
+import project.exceptions.IncorrectInputParametersException;
 import project.model.OutputParameters;
 import project.model.json.Document;
 import project.model.json.InputData;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public abstract class IterateByDocs implements IterateBy {
     private static final Logger LOG = Logger.getLogger(IterateByDocs.class);
@@ -24,13 +22,24 @@ public abstract class IterateByDocs implements IterateBy {
     @Override
     public OutputParameters iterateAndCompare(ComparatorBy comparator, InputData inputDataFf, InputData inputDataSf) {
         if (!isInputDataCorrect(inputDataFf) || !isInputDataCorrect(inputDataSf)) {
-            LOG.info("One of the input files doesn't contain search results");
-            return null;
+            throw new IncorrectInputParametersException("One of the input files doesn't contain search results");
         }
         LOG.info("Getting objects from search result");
         List<Document> inputDocsFf = inputDataFf.getResponse().getDocs();
         List<Document> inputDocsSf = inputDataSf.getResponse().getDocs();
         return runIteration(comparator, inputDocsFf, inputDocsSf);
+    }
+
+    protected List<Document> getListWithMaxLength(List<Document> first, List<Document> second) {
+        if (first.size() > second.size())
+            return first;
+        return second;
+    }
+
+    protected List<Document> getListWithMinOrEqLength(List<Document> first, List<Document> second) {
+        if (first.size() <= second.size())
+            return first;
+        return second;
     }
 
     abstract OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf);

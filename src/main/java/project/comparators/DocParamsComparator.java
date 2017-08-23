@@ -1,18 +1,20 @@
 package project.comparators;
 
-import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
+import project.exceptions.SystemException;
 import project.model.json.Document;
 
 import java.lang.reflect.Field;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class DocParamsComparator implements ComparatorBy {
     private static final Logger LOG = Logger.getLogger(DocParamsComparator.class);
 
     public List<String> getDiff(Document documentFf, Document documentSf) {
         if (documentFf.equals(documentSf)) {
-            LOG.info(StringFormatter.format("{} is equals "));
+            LOG.info(String.format("%s is equals %s", documentFf.getId(), documentSf.getId()));
             return Collections.singletonList("is equals");
         }
         List<String> diffFields = new ArrayList<>();
@@ -21,12 +23,13 @@ public class DocParamsComparator implements ComparatorBy {
             field.setAccessible(true);
             try {
                 if (!isValueEq(field.get(documentFf), field.get(documentSf))) {
-                    LOG.info(StringFormatter.format("{} is not equals ", field.getName()));
+                    LOG.info(String.format("%s is not equals ", field.getName()));
                     diffFields.add(field.getName());
                 }
-                LOG.info(StringFormatter.format("{} is equals ", field.getName()));
+                LOG.info(String.format("%s is equals ", field.getName()));
             } catch (IllegalAccessException e) {
-                LOG.error(StringFormatter.format("Can't get access to {} field and getting {}",field.getName(), e));
+                throw new SystemException(String.format("Can't get access to %s field",
+                        field.getName()), e);
             }
         }
         return diffFields;

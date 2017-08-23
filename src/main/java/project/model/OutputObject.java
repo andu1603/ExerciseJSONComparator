@@ -13,7 +13,8 @@ public class OutputObject {
     private List<String> diffList;
     private String msg;
 
-    private OutputObject() {}
+    private OutputObject() {
+    }
 
     public static Builder newBuilder() {
         return new OutputObject().new Builder();
@@ -21,7 +22,8 @@ public class OutputObject {
 
     public class Builder {
 
-        private Builder() {}
+        private Builder() {
+        }
 
         public Builder setValueIdFirstObj(String valueIdFirstObj) {
             OutputObject.this.valueIdFirstObj = valueIdFirstObj;

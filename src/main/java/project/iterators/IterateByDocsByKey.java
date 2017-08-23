@@ -1,15 +1,15 @@
 package project.iterators;
 
-import com.sun.javafx.binding.StringFormatter;
 import org.apache.log4j.Logger;
 import project.comparators.ComparatorBy;
-import project.convertors.Name2FieldConverter;
+import project.converters.Name2FieldConverter;
+import project.exceptions.IncorrectInputParametersException;
+import project.exceptions.SystemException;
 import project.model.OutputObject;
 import project.model.OutputParameters;
 import project.model.json.Document;
 
 import java.lang.reflect.Field;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,48 +26,41 @@ public class IterateByDocsByKey extends IterateByDocs {
         field.setAccessible(true);
         OutputParameters output = new OutputParameters();
         output.setNameIdField(field.getName());
-        Map<Object, Document> inputDocsMap = new HashMap<>();
-
         try {
-            for (Document doc : getListWithMinOrEqLength(inputDocsFf, inputDocsSf)) {
-                Object key = null;
-                key = field.get(doc);
-                if (key == null) {
-                    LOG.warn("is empty");//TODO:add msg
-                    continue;
-                }
-                inputDocsMap.put(key, doc);
+            Map<Object, Document> inputDocsFfMap = formMap(inputDocsFf);
+            Map<Object, Document> inputDocsSfMap = formMap(inputDocsSf);
+            int diffFf = Math.abs(inputDocsFf.size() - inputDocsFfMap.size());
+            int diffSf = Math.abs(inputDocsSf.size() - inputDocsSfMap.size());
+            if (diffFf > 0 || diffSf > 0) {
+                output.addMsg(String.format("Search result contains objects with empty key parameter: " +
+                        "%d from first file and %d from second", diffFf, diffSf));
             }
-            for (Document doc : getListWithMaxLength(inputDocsFf, inputDocsSf)) {
-                Object key = field.get(doc);
-                if (key == null) {
-                    LOG.warn("is empty");//TODO:add msg
-                    continue;
-                }
+            if (inputDocsFfMap.keySet().retainAll(inputDocsSfMap.keySet()))
+                output.addMsg("Search result from one file contains objects without pair in the other file");
+            for (Object key : inputDocsFfMap.keySet()) {
                 OutputObject.Builder builder = OutputObject.newBuilder().setValueIdFirstObj(key.toString());
-                Document docFromMap = inputDocsMap.get(key);
-                if (docFromMap == null) {
-                }
+                Document docFromMap = inputDocsSfMap.get(key);
                 builder.setValueIdSecondObj(key.toString());
-                builder.setDiffList(comparator.getDiff(doc, docFromMap));
+                builder.setDiffList(comparator.getDiff(inputDocsFfMap.get(key), docFromMap));
                 output.add(builder.build());
             }
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            throw new SystemException("Problem with field access", e);
         }
         return output;
     }
 
-    private List<Document> getListWithMaxLength(List<Document> first, List<Document> second) {
-        if (first.size() > second.size())
-            return first;
-        return second;
-    }
-
-    private List<Document> getListWithMinOrEqLength(List<Document> first, List<Document> second) {
-        if (first.size() <= second.size())
-            return first;
-        return second;
+    private Map<Object, Document> formMap(List<Document> list) throws IllegalAccessException {
+        Map<Object, Document> resultMap = new HashMap<>();
+        for (Document doc : list) {
+            Object key = field.get(doc);
+            if (key == null) return resultMap;
+            if (resultMap.containsKey(key)) {
+                throw new IncorrectInputParametersException("Objects from search result contains duplicates by input key");
+            } else
+                resultMap.put(key, doc);
+        }
+        return resultMap;
     }
 
 }

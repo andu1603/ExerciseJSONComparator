@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Keyword{
+public class Keyword {
     private String isMajor;
     private Integer rank;
     private String name;

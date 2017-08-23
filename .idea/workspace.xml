@@ -5,29 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8356f651-f26b-4f6c-95fe-798d77b17e3e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/FileNamesValidator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/JSON2JavaObjectConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/JSONComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/mode/IterateBy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/mode/IterateByKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/mode/IterateByOrder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/mode/IterateFactory.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/InputParameters.class" afterPath="$PROJECT_DIR$/target/classes/project/model/InputParameters.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Byline.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Byline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Document.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Document.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Headline.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Headline.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/InputData.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/InputData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Keyword.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Keyword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Multimedia.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Multimedia.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Person.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/model/json/Response.class" afterPath="$PROJECT_DIR$/target/classes/project/model/json/Response.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/project/printers/MapListConsolePrinter.class" afterPath="$PROJECT_DIR$/target/classes/project/printers/MapListConsolePrinter.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/convertors/JSON2JavaObjectConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/convertors/JSONParameter2JavaObjectFieldNameConverter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/project/convertors/Name2FieldConverter.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/JSONComparatorApplication.java" afterPath="$PROJECT_DIR$/src/main/java/project/JSONComparatorApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java" afterPath="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java" afterPath="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java" afterPath="$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/controllers/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/project/controllers/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/InputParameters.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/InputParameters.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/converters/JSON2JavaObjectConverter.java" afterPath="$PROJECT_DIR$/src/main/java/project/converters/JSON2JavaObjectConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/converters/JSONParameter2JavaObjectFieldNameConverter.java" afterPath="$PROJECT_DIR$/src/main/java/project/converters/JSONParameter2JavaObjectFieldNameConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/converters/Name2FieldConverter.java" afterPath="$PROJECT_DIR$/src/main/java/project/converters/Name2FieldConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/OutputObject.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/OutputObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/json/Byline.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/json/Byline.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/json/Document.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/json/Document.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/json/Headline.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/json/Headline.java" />
@@ -37,11 +33,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/json/Person.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/json/Person.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/model/json/Response.java" afterPath="$PROJECT_DIR$/src/main/java/project/model/json/Response.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java" afterPath="$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/project/mode/IterateBy.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/project/mode/IterateByKey.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/project/mode/IterateByOrder.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/project/mode/IterateFactory.java" afterPath="$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java" afterPath="$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,7 +45,109 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/controllers/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocParamsComparator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSON2JavaObjectConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/converters/JSON2JavaObjectConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IterateByDocsByKey.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Name2FieldConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/converters/Name2FieldConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputParameters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="2938" column="25" lean-forward="false" selection-start-line="2938" selection-start-column="25" selection-end-line="2938" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OutputObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InputParameters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/model/InputParameters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,6 +161,13 @@
     <findStrings>
       <find>get</find>
       <find>toJso</find>
+      <find>try</find>
+      <find>IncorrectInputParametersException</find>
+      <find>SystemException</find>
+      <find>{}</find>
+      <find>isEmpty</find>
+      <find>%</find>
+      <find>formatter</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,13 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/project/InputParametersParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/InputParameters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/Multimedia.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/project/DefaultPrinter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/MapListPrinter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/MapListConsolePrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/JSON2JavaObjectConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/Comparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/ComparatorByOrder.java" />
@@ -96,14 +190,10 @@
         <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorByOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorByInputParameter.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/mode/IterateByOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/mode/IterateFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/JSONComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/convertors/JSON2JavaObjectConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/convertors/JSONParameter2JavaObjectFieldNameConverter.java" />
@@ -112,25 +202,36 @@
         <option value="$PROJECT_DIR$/src/main/java/project/convertors/Name2FieldConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/JSONComparatorApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/builders/OutputObjectBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/OutputObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/controllers/Controller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/InputParameters.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/JSONEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/exceptions/IncorrectInputParameters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/converters/JSONParameter2JavaObjectFieldNameConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Byline.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Document.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/Headline.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/InputData.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/Keyword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Multimedia.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/json/Response.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Byline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Document.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/model/json/Multimedia.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/OutputObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/exceptions/IncorrectInputParametersException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/exceptions/SystemException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/printers/ExceptionConsolePrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/controllers/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/converters/JSON2JavaObjectConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/converters/Name2FieldConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java" />
       </list>
     </option>
   </component>
@@ -213,51 +314,6 @@
             </path>
             <path>
               <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JSONComparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="comparators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JSONComparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="iterators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JSONComparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JSONComparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="printers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JSONComparator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-              <item name="validators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JSONComparator" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -330,7 +386,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="project.JSONComparatorApplication" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-ff &quot;C:\Users\Anastasiia_Dudukina\Desktop\JSONComparator\input\1f.json&quot; -sf &quot;C:\Users\Anastasiia_Dudukina\Desktop\JSONComparator\input\2f.json&quot; -ifc &quot;snippet&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="-ff &quot;C:\Users\Anastasiia_Dudukina\Desktop\JSONComparator\input\1f.json&quot; -sf &quot;C:\Users\Anastasiia_Dudukina\Desktop\JSONComparator\input\2f.json&quot; -ifc &quot;abstract&quot;" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -454,6 +510,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -468,7 +525,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22654584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22654584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -516,21 +573,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/project/controllers/Controller.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -539,20 +582,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Persons.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Sorting.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Script.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Query.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/METAInformation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Documents.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/java-json-tools/json-schema-validator/2.2.8/json-schema-validator-2.2.8.jar!/com/github/fge/jsonschema/main/JsonSchema.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/JSONValidator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/DocumentComparator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/project/ComparatorTest.java">
@@ -572,32 +601,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/FileConverter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/ComparatorByInputParameter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#170#171#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/com/google/gson/FieldNamingPolicy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -625,16 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/convertors/JSON2JavaObjectConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/io/PrintStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -651,81 +644,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/convertors/JSONParameter2JavaObjectFieldNameConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/JSONComparatorApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/convertors/Name2FieldConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/builders/OutputObjectBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,54 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/InputParameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/controllers/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -806,37 +681,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/JSONEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="51" column="57" lean-forward="true" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/InputData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Keyword.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.18/lombok-1.16.18.jar!/lombok/Builder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/reflect/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="169" column="18" lean-forward="false" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
+          <folding>
+            <element signature="e#5431#5432#0" expanded="false" />
+            <element signature="e#5458#5459#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -856,18 +724,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/JSONEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/InputData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="119">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Document.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Keyword.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Multimedia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -888,19 +764,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.18/lombok-1.16.18.jar!/lombok/Builder.class">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/RuntimeException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="223">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Multimedia.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/exceptions/IncorrectInputParametersException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/exceptions/SystemException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/ComparatorBy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/ComparatorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/converters/JSONParameter2JavaObjectFieldNameConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateBy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/validators/FileNamesValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/JSONComparatorApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/printers/MapListConsolePrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="316" column="29" lean-forward="false" selection-start-line="316" selection-start-column="29" selection-end-line="316" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/json/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/printers/ExceptionConsolePrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/InputParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/comparators/DocParamsComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/controllers/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/converters/JSON2JavaObjectConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/converters/Name2FieldConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="46" lean-forward="false" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/javafx-src.zip!/com/sun/javafx/binding/StringFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="180" column="51" lean-forward="false" selection-start-line="180" selection-start-column="51" selection-end-line="180" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/model/OutputParameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="2938" column="25" lean-forward="false" selection-start-line="2938" selection-start-column="25" selection-end-line="2938" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/iterators/IterateByDocsByKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

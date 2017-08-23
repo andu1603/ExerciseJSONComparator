@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Person{
+public class Person {
     private String organization;
     private String role;
     private Integer rank;

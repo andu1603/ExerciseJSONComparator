@@ -9,6 +9,6 @@ import lombok.ToString;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class InputData{
+public class InputData {
     private Response response;
 }

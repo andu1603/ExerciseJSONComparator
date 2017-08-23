@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Headline{
+public class Headline {
     private String main;
     private String printHeadline;
 }

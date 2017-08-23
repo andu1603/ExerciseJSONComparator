@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Byline{
+public class Byline {
     private List<Person> person;
     private String original;
     private String organization;
