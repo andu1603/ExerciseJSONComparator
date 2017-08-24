@@ -58,7 +58,7 @@ public class IterateByDocsByKey extends IterateByDocs {
             Object key = field.get(doc);
             if (key == null) return resultMap;
             if (resultMap.containsKey(key)) {
-                throw new IncorrectInputParametersException("Objects from search result contains duplicates by input key");
+                throw new IncorrectInputParametersException("Objects from search result contains duplicates by input key.");
             } else
                 resultMap.put(key, doc);
         }
