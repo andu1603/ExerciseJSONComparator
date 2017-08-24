@@ -12,7 +12,7 @@ public class IterateByDocsByOrder extends IterateByDocs {
     private static final Logger LOG = Logger.getLogger(IterateByDocsByOrder.class);
 
     @Override
-    OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
+    protected OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
         OutputParameters output = new OutputParameters();
         output.setNameIdField("id");
         if (inputDocsFf.size() != inputDocsSf.size())

@@ -2,7 +2,7 @@ package project.iterators;
 
 import org.apache.log4j.Logger;
 import project.comparators.ComparatorBy;
-import project.converters.Name2FieldConverter;
+import project.converters.NameConverter;
 import project.exceptions.IncorrectInputParametersException;
 import project.exceptions.SystemException;
 import project.model.OutputObject;
@@ -19,10 +19,10 @@ public class IterateByDocsByKey extends IterateByDocs {
     private Field field;
 
     public IterateByDocsByKey(String parameterName) {
-        this.field = Name2FieldConverter.convert(parameterName);
+        this.field = NameConverter.convertParameter2FieldObj(parameterName);
     }
 
-    public OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
+    protected OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
         field.setAccessible(true);
         OutputParameters output = new OutputParameters();
         output.setNameIdField(field.getName());
@@ -38,11 +38,11 @@ public class IterateByDocsByKey extends IterateByDocs {
             if (inputDocsFfMap.keySet().retainAll(inputDocsSfMap.keySet()))
                 output.addMsg("Search result from one file contains objects without pair in the other file");
             for (Object key : inputDocsFfMap.keySet()) {
-                OutputObject.Builder builder = OutputObject.newBuilder().setValueIdFirstObj(key.toString());
-                Document docFromMap = inputDocsSfMap.get(key);
-                builder.setValueIdSecondObj(key.toString());
-                builder.setDiffList(comparator.getDiff(inputDocsFfMap.get(key), docFromMap));
-                output.add(builder.build());
+                output.add(OutputObject.newBuilder()
+                        .setValueIdFirstObj(key.toString())
+                        .setValueIdSecondObj(key.toString())
+                        .setDiffList(comparator.getDiff(inputDocsFfMap.get(key), inputDocsSfMap.get(key)))
+                        .build());
             }
         } catch (IllegalAccessException e) {
             throw new SystemException("Problem with field access", e);

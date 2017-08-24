@@ -12,8 +12,7 @@ import java.util.List;
 public abstract class IterateByDocs implements IterateBy {
     private static final Logger LOG = Logger.getLogger(IterateByDocs.class);
 
-    @Override
-    public boolean isInputDataCorrect(InputData inputData) {
+    private boolean isInputDataCorrect(InputData inputData) {
         return inputData != null
                 && inputData.getResponse() != null
                 && inputData.getResponse().getDocs() != null;
@@ -42,5 +41,5 @@ public abstract class IterateByDocs implements IterateBy {
         return second;
     }
 
-    abstract OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf);
+    protected abstract OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf);
 }

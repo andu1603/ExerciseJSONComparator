@@ -27,7 +27,7 @@ public class JSON2JavaObjectConverter {
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(policy)
                 .create();
-        InputData inputData = null;
+        InputData inputData;
         try (FileReader reader = new FileReader(file)) {
             inputData = gson.fromJson(reader, InputData.class);
         } catch (FileNotFoundException e) {
