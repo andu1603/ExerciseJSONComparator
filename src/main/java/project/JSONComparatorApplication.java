@@ -8,8 +8,11 @@ public class JSONComparatorApplication {
     private static final Logger LOG = Logger.getLogger(JSONComparatorApplication.class);
 
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
+        System.out.println("Started");
         LOG.info("Start application");
         Controller.run(args);
         LOG.info("Finish application");
+        System.out.println(String.format("Finished with %d ms", System.currentTimeMillis() - start));
     }
 }

@@ -2,7 +2,7 @@ package project.printers;
 
 import project.model.OutputParameters;
 
-public class MapListConsolePrinter implements OutputDataPrinter{
+public class ConsolePrinter implements OutputDataPrinter{
 
     public void print(OutputParameters output) {
         if (output.getMsg() != null && !output.getMsg().isEmpty())

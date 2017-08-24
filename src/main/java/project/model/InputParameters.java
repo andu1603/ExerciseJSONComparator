@@ -30,6 +30,9 @@ public class InputParameters {
     @Parameter(names = {"--idForComparing", "-ifc"})
     private String idForComparing;
 
+    @Parameter(names = {"-outputFile","-of"})
+    private String fileName;
+
    /* @Parameter(names={"--help", "-h"},
             help = true)
     private boolean help;*/
