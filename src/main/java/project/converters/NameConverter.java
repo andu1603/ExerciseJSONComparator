@@ -2,14 +2,17 @@ package project.converters;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.annotations.SerializedName;
+import org.apache.log4j.Logger;
 import project.exceptions.IncorrectInputParametersException;
 import project.model.json.Document;
 
 import java.lang.reflect.Field;
 
 public class NameConverter {
+    private static final Logger LOG = Logger.getLogger(NameConverter.class);
 
     public static Field convertParameter2FieldObj(String name) {
+        LOG.info(String.format("Convert %s to field", name));
         String convertedName = convertParameter2FieldName(name);
         for (Field field : Document.class.getDeclaredFields()) {
             if (convertedName.equals(field.getName())) return field;
@@ -21,13 +24,15 @@ public class NameConverter {
                 "in the Document class", name));
     }
 
-    public static String convertFieldObj2Parameter(Field field){
+    public static String convertFieldObj2Parameter(Field field) {
+        LOG.info(String.format("Convert field %s to JSON parameter", field.getName()));
         for (SerializedName annotation : field.getAnnotationsByType(SerializedName.class))
             return annotation.value();
         return FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES.translateName(field);
     }
 
     public static String convertParameter2FieldName(String name) {
+        LOG.info(String.format("Convert parameter %s to field name", name));
         StringBuilder translation = new StringBuilder();
         while (name.startsWith("_")) {
             name = name.substring(1);

@@ -11,7 +11,8 @@ import project.model.InputParameters;
 import project.model.OutputParameters;
 import project.model.json.InputData;
 import project.printers.ExceptionConsolePrinter;
-import project.printers.MapListConsolePrinter;
+import project.printers.OutputDataPrinter;
+import project.printers.PrinterFactory;
 
 import java.util.Arrays;
 
@@ -30,8 +31,12 @@ public class Controller {
             InputData inputDataSf = JSON2JavaObjectConverter.convert(inputParameters.getSecondFile());
             IterateBy iterateMethod = IterateFactory.getIterateMethod(inputParameters);
             ComparatorBy comparator = ComparatorFactory.getComparator(inputParameters);
+            LOG.info(String.format("Using %s iterator with %s comparator", iterateMethod.getClass().getName()
+                    , comparator.getClass().getName()));
             OutputParameters diff = iterateMethod.iterateAndCompare(comparator, inputDataFf, inputDataSf);
-            MapListConsolePrinter.print(diff);
+            OutputDataPrinter printer = PrinterFactory.getPrinter(inputParameters);
+            LOG.info(String.format("Print using %s printer", printer.getClass().getName()));
+            printer.print(diff);
         } catch (Exception e) {
             LOG.error(e);
             ExceptionConsolePrinter.print(e);

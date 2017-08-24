@@ -26,6 +26,7 @@ public class IterateByDocsByKey extends IterateByDocs {
         field.setAccessible(true);
         OutputParameters output = new OutputParameters();
         output.setNameIdField(field.getName());
+        LOG.info(String.format("Comparing by %s field",field.getName()));
         try {
             Map<Object, Document> inputDocsFfMap = formMap(inputDocsFf);
             Map<Object, Document> inputDocsSfMap = formMap(inputDocsSf);
@@ -38,6 +39,7 @@ public class IterateByDocsByKey extends IterateByDocs {
             if (inputDocsFfMap.keySet().retainAll(inputDocsSfMap.keySet()))
                 output.addMsg("Search result from one file contains objects without pair in the other file");
             for (Object key : inputDocsFfMap.keySet()) {
+                LOG.info(String.format("Compare objects with %s key", key.toString()));
                 output.add(OutputObject.newBuilder()
                         .setValueIdFirstObj(key.toString())
                         .setValueIdSecondObj(key.toString())
