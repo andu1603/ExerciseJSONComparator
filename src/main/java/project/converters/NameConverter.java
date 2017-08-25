@@ -4,21 +4,22 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.annotations.SerializedName;
 import org.apache.log4j.Logger;
 import project.exceptions.IncorrectInputParametersException;
-import project.model.json.Document;
 
 import java.lang.reflect.Field;
 
 public class NameConverter {
     private static final Logger LOG = Logger.getLogger(NameConverter.class);
 
-    public static Field convertParameter2FieldObj(String name) {
+    public static Field convertParameter2FieldObj(String name, Class clazz) {
         LOG.info(String.format("Convert %s to field", name));
         String convertedName = convertParameter2FieldName(name);
-        for (Field field : Document.class.getDeclaredFields()) {
-            if (convertedName.equals(field.getName())) return field;
-            for (SerializedName annotation : field.getAnnotationsByType(SerializedName.class))
-                if (name.equals(annotation.value()))
+        for (Field field : clazz.getDeclaredFields()) {
+            for (SerializedName annotation : field.getAnnotationsByType(SerializedName.class)) {
+                if (name.equals(annotation.value())) {
                     return field;
+                }
+            }
+            if (convertedName.equals(field.getName())) return field;
         }
         throw new IncorrectInputParametersException(String.format("Parameter with name like %s doesn't exist " +
                 "in the Document class", name));
@@ -34,7 +35,7 @@ public class NameConverter {
     public static String convertParameter2FieldName(String name) {
         LOG.info(String.format("Convert parameter %s to field name", name));
         StringBuilder translation = new StringBuilder();
-        while (name.startsWith("_")) {
+        if (name.startsWith("_")) {
             name = name.substring(1);
         }
         if (!name.contains("_"))

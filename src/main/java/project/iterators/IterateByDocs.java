@@ -15,7 +15,8 @@ public abstract class IterateByDocs implements IterateBy {
     private boolean isInputDataCorrect(InputData inputData) {
         return inputData != null
                 && inputData.getResponse() != null
-                && inputData.getResponse().getDocs() != null;
+                && inputData.getResponse().getDocs() != null
+                && !inputData.getResponse().getDocs().isEmpty();
     }
 
     @Override

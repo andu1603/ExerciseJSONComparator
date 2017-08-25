@@ -12,7 +12,7 @@ public class JSONComparatorApplication {
         System.out.println("Started");
         LOG.info("Start application");
         Controller.run(args);
-        LOG.info("Finish application");
-        System.out.println(String.format("Finished with %d ms", System.currentTimeMillis() - start));
+        LOG.info(String.format("Finished with %d ms", System.currentTimeMillis() - start));
+        System.out.println("Finished");
     }
 }

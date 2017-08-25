@@ -1,19 +1,13 @@
 package project.model.json;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import java.net.URL;
 import java.util.Date;
 import java.util.List;
 
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 public class Document {
     @SerializedName("abstract")
     private Integer abstr;

@@ -12,7 +12,7 @@ import java.io.File;
 @Setter
 public class InputParameters {
     @Parameter(names = {"--firstFile", "-ff"}
-            , description = ""
+            , description = "Name of the first file for comparison."
             , validateWith = FileNamesValidator.class
             , converter = com.beust.jcommander.converters.FileConverter.class
             , required = true
@@ -20,20 +20,22 @@ public class InputParameters {
     private File firstFile;
 
     @Parameter(names = {"--secondFile", "-sf"}
-            , description = ""
+            , description = "Name of the second file for comparison."
             , validateWith = FileNamesValidator.class
             , converter = FileConverter.class
             , required = true
     )
     private File secondFile;
 
-    @Parameter(names = {"--idForComparing", "-ifc"})
+    @Parameter(names = {"--idForComparison", "-ifc"}
+            , description = "JSON parameter name to be compared.")
     private String idForComparing;
 
-    @Parameter(names = {"-outputFile","-of"})
+    @Parameter(names = {"-outputFile", "-of"}
+            , description = "Name of the file for output result.")
     private String fileName;
 
-   /* @Parameter(names={"--help", "-h"},
+   /* @Parameter(names={"--help", "-h"},//TODO:think about help case
             help = true)
     private boolean help;*/
 }

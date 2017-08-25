@@ -13,8 +13,7 @@ public class ConsolePrinter implements OutputDataPrinter{
             System.out.println(output.getNameIdField() + ": "
                     + valueIdFirstObj +
                     (valueIdFirstObj.equals(valueIdSecondObj) ? "" : " <--> " + valueIdSecondObj));
-            for (String value : outputObject.getDiffList())
-                System.out.println('\t' + value);
+            outputObject.getDiffList().forEach(value -> System.out.println('\t' + value));
         });
     }
 }

@@ -1,14 +1,8 @@
 package project.model.json;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 public class InputData {
     private Response response;
 }

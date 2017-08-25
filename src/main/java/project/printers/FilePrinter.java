@@ -16,7 +16,7 @@ public class FilePrinter implements OutputDataPrinter {
     @Override
     public void print(OutputParameters output) {
         String lineSeparator = System.getProperty("line.separator");
-        try (FileWriter writer = new FileWriter(filepath)){
+        try (FileWriter writer = new FileWriter(filepath)) {
             StringBuilder builder = new StringBuilder();
             if (output.getMsg() != null && !output.getMsg().isEmpty())
                 builder.append(output.getMsg())
@@ -24,14 +24,14 @@ public class FilePrinter implements OutputDataPrinter {
             output.getOutput().forEach(outputObject -> {
                 String valueIdFirstObj = outputObject.getValueIdFirstObj();
                 String valueIdSecondObj = outputObject.getValueIdSecondObj();
-                builder.append(output.getNameIdField() + ": "
-                        + valueIdFirstObj +
-                        (valueIdFirstObj.equals(valueIdSecondObj) ? "" : " <--> " + valueIdSecondObj))
+                builder.append(output.getNameIdField())
+                        .append(": ")
+                        .append(valueIdFirstObj)
+                        .append((valueIdFirstObj.equals(valueIdSecondObj) ? "" : " <--> " + valueIdSecondObj))
                         .append(lineSeparator);
-                for (String value : outputObject.getDiffList())
-                    builder.append('\t')
-                            .append(value)
-                            .append(lineSeparator);
+                outputObject.getDiffList().forEach(value -> builder.append('\t')
+                        .append(value)
+                        .append(lineSeparator));
             });
             writer.write(builder.toString());
         } catch (IOException e) {

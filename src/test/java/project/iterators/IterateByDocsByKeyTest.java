@@ -59,8 +59,8 @@ public class IterateByDocsByKeyTest {
 
     @Test
     public void runNullKeyFieldValue() throws Exception {
-        docs.add(docWithTypeParameter);
         docs.add(new Document());
+        docs.add(docWithTypeParameter);
         input.getResponse().setDocs(docs);
         assertTrue(iterator.iterateAndCompare(comparator, input, input).getMsg().contains("1"));
     }

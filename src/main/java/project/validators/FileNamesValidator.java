@@ -9,6 +9,6 @@ import java.io.File;
 public class FileNamesValidator implements IParameterValidator {
     public void validate(String parameterName, String fileName) throws ParameterException {
         if (!new File(fileName).exists())
-            throw new IncorrectInputParametersException("File " + fileName + " doesn't exist");
+            throw new IncorrectInputParametersException(String.format("File %s doesn't exist", fileName));
     }
 }

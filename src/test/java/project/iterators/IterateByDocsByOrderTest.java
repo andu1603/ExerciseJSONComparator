@@ -48,12 +48,23 @@ public class IterateByDocsByOrderTest {
     }
 
     @Test
-    public void runWithEmptyDoc() throws Exception {
+    public void runWithEmptyDocList() throws Exception {
         expectedEx.expect(IncorrectInputParametersException.class);
         expectedEx.expectMessage("One of the input files doesn't contain search results");
         InputData inputData = new InputData();
         Response response = new Response();
         response.setDocs(null);
+        inputData.setResponse(response);
+        iterator.iterateAndCompare(null, inputData, inputData);
+    }
+
+    @Test
+    public void runWithEmptyDoc() throws Exception {
+        expectedEx.expect(IncorrectInputParametersException.class);
+        expectedEx.expectMessage("One of the input files doesn't contain search results");
+        InputData inputData = new InputData();
+        Response response = new Response();
+        response.setDocs(Collections.emptyList());
         inputData.setResponse(response);
         iterator.iterateAndCompare(null, inputData, inputData);
     }

@@ -1,17 +1,11 @@
 package project.model.json;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import java.net.URI;
 import java.util.Map;
 
-@ToString
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 public class Multimedia {
     private Integer width;
     private URI url;

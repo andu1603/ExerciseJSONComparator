@@ -19,7 +19,7 @@ public class IterateByDocsByKey extends IterateByDocs {
     private Field field;
 
     public IterateByDocsByKey(String parameterName) {
-        this.field = NameConverter.convertParameter2FieldObj(parameterName);
+        this.field = NameConverter.convertParameter2FieldObj(parameterName, Document.class);
     }
 
     protected OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
@@ -56,7 +56,7 @@ public class IterateByDocsByKey extends IterateByDocs {
         Map<Object, Document> resultMap = new HashMap<>();
         for (Document doc : list) {
             Object key = field.get(doc);
-            if (key == null) return resultMap;
+            if (key == null) continue;
             if (resultMap.containsKey(key)) {
                 throw new IncorrectInputParametersException("Objects from search result contains duplicates by input key.");
             } else

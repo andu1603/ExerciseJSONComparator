@@ -14,21 +14,21 @@ public class NameConverterTest {
 
     @Test
     public void convertParameter2FieldObjByAnnotation() throws Exception {
-        assertEquals(Document.class.getDeclaredField("id"), NameConverter.convertParameter2FieldObj("_id"));
-        assertEquals(Document.class.getDeclaredField("abstr"), NameConverter.convertParameter2FieldObj("abstract"));
+        assertEquals(Document.class.getDeclaredField("id"), NameConverter.convertParameter2FieldObj("_id", Document.class));
+        assertEquals(Document.class.getDeclaredField("abstr"), NameConverter.convertParameter2FieldObj("abstract", Document.class));
     }
 
     @Test
     public void convertParameter2FieldObjByName() throws Exception {
-        assertEquals(Document.class.getDeclaredField("typeOfMaterial"), NameConverter.convertParameter2FieldObj("type_of_material"));
-        assertEquals(Document.class.getDeclaredField("snippet"), NameConverter.convertParameter2FieldObj("snippet"));
+        assertEquals(Document.class.getDeclaredField("typeOfMaterial"), NameConverter.convertParameter2FieldObj("type_of_material", Document.class));
+        assertEquals(Document.class.getDeclaredField("snippet"), NameConverter.convertParameter2FieldObj("snippet", Document.class));
     }
 
     @Test
     public void convertParameter2FieldObjNotExist() throws Exception {
         expectedEx.expect(IncorrectInputParametersException.class);
         expectedEx.expectMessage("Parameter with name like some_strange_value doesn't exist in the Document class");
-        NameConverter.convertParameter2FieldObj("some_strange_value");
+        NameConverter.convertParameter2FieldObj("some_strange_value", Document.class);
     }
 
     @Test
@@ -45,6 +45,7 @@ public class NameConverterTest {
     @Test
     public void convertParameter2FieldName() throws Exception {
         assertEquals("testName", NameConverter.convertParameter2FieldName("_test_name"));
+        assertEquals("a", NameConverter.convertParameter2FieldName("_a"));
 
     }
 
