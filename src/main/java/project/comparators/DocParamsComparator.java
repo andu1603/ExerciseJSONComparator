@@ -24,15 +24,14 @@ public class DocParamsComparator implements ComparatorBy {
             field.setAccessible(true);
             try {
                 if (!isValueEq(field.get(documentFf), field.get(documentSf))) {
-                    LOG.info(String.format("%s is not equals ", field.getName()));
                     diffFields.add(NameConverter.convertFieldObj2Parameter(field));
                 }
-                LOG.info(String.format("%s is equals ", field.getName()));
             } catch (IllegalAccessException e) {
                 throw new SystemException(String.format("Can't get access to %s field",
                         field.getName()), e);
             }
         }
+        LOG.info(String.format("Diff in %s fields", diffFields.toString()));
         return diffFields;
     }
 

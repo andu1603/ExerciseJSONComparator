@@ -17,7 +17,7 @@ public class IterateByDocsByOrder extends IterateByDocs {
                                             List<Document> inputDocsSf) {
         OutputParameters output = new OutputParameters();
         output.setNameIdField("id");
-        LOG.info("Comparing by order field");
+        LOG.info("Comparing by order");
         if (inputDocsFf.size() != inputDocsSf.size())
             output.addMsg("Count of search result objects is not equals in files. Diff = "
                     + Math.abs(inputDocsFf.size() - inputDocsSf.size()));
