@@ -20,7 +20,7 @@ public class InputParameters {
     private File firstFile;
 
     @Parameter(names = {"--secondFile", "-sf"}
-            , description = "Name of the second file for comparison."
+            , description = "Name of the second file for the the comparison."
             , validateWith = FileNamesValidator.class
             , converter = FileConverter.class
             , required = true
@@ -32,10 +32,11 @@ public class InputParameters {
     private String idForComparing;
 
     @Parameter(names = {"-outputFile", "-of"}
-            , description = "Name of the file for output result.")
+            , description = "Name of the file for the output result.")
     private String fileName;
 
-   /* @Parameter(names={"--help", "-h"},//TODO:think about help case
-            help = true)
-    private boolean help;*/
+    @Parameter(names = {"--help", "-h"}
+            , description = "Show all available commands"
+            , help = true)
+    private boolean help;
 }

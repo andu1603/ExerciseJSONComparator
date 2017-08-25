@@ -5,6 +5,8 @@ import org.apache.log4j.Logger;
 import project.comparators.ComparatorBy;
 import project.comparators.ComparatorFactory;
 import project.converters.JSON2JavaObjectConverter;
+import project.exceptions.IncorrectInputParametersException;
+import project.exceptions.SystemException;
 import project.iterators.IterateBy;
 import project.iterators.IterateFactory;
 import project.model.InputParameters;
@@ -24,9 +26,14 @@ public class Controller {
         JCommander commander = JCommander.newBuilder()
                 .addObject(inputParameters)
                 .build();
+        commander.parse(input);
+        if (inputParameters.isHelp()) {
+            commander.usage();
+            return;
+        }
         try {
             LOG.info(String.format("Start to parse input parameters: %s", Arrays.toString(input)));
-            commander.parse(input);
+            System.out.println("Started");
             InputData inputDataFf = JSON2JavaObjectConverter.convert(inputParameters.getFirstFile());
             InputData inputDataSf = JSON2JavaObjectConverter.convert(inputParameters.getSecondFile());
             IterateBy iterateMethod = IterateFactory.getIterateMethod(inputParameters);
@@ -37,9 +44,14 @@ public class Controller {
             OutputDataPrinter printer = PrinterFactory.getPrinter(inputParameters);
             LOG.info(String.format("Print using %s printer", printer.getClass().getName()));
             printer.print(diff);
-        } catch (Exception e) {
+        } catch (SystemException | IncorrectInputParametersException e) {
             LOG.error(e);
             ExceptionConsolePrinter.print(e);
+        } catch (Exception e) {
+            LOG.error(e);
+            ExceptionConsolePrinter.print(new SystemException("System incorrect behaviour", e));
+        } finally {
+            System.out.println("Finished");
         }
     }
 }
