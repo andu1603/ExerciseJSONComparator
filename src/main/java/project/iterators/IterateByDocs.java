@@ -42,5 +42,7 @@ public abstract class IterateByDocs implements IterateBy {
         return second;
     }
 
-    protected abstract OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf);
+    protected abstract OutputParameters runIteration(ComparatorBy comparator,
+                                                     List<Document> inputDocsFf,
+                                                     List<Document> inputDocsSf);
 }

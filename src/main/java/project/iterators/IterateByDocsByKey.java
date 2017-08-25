@@ -22,11 +22,13 @@ public class IterateByDocsByKey extends IterateByDocs {
         this.field = NameConverter.convertParameter2FieldObj(parameterName, Document.class);
     }
 
-    protected OutputParameters runIteration(ComparatorBy comparator, List<Document> inputDocsFf, List<Document> inputDocsSf) {
+    protected OutputParameters runIteration(ComparatorBy comparator,
+                                            List<Document> inputDocsFf,
+                                            List<Document> inputDocsSf) {
         field.setAccessible(true);
         OutputParameters output = new OutputParameters();
         output.setNameIdField(field.getName());
-        LOG.info(String.format("Comparing by %s field",field.getName()));
+        LOG.info(String.format("Comparing by %s field", field.getName()));
         try {
             Map<Object, Document> inputDocsFfMap = formMap(inputDocsFf);
             Map<Object, Document> inputDocsSfMap = formMap(inputDocsSf);

@@ -1,5 +1,6 @@
 package project.model.json;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Data;
 
 @Data
@@ -7,6 +8,8 @@ public class Person {
     private String organization;
     private String role;
     private Integer rank;
-    private String firstname;
-    private String lastname;
+    @SerializedName("firstname")
+    private String firstName;
+    @SerializedName("lastname")
+    private String lastName;
 }
